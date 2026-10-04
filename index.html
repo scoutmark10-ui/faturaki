@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="pt-MZ">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./head-loader.js"></script>
 		<title>FaturAki - Welcome</title>
-    <!-- Tailwind CSS CDN -->
+		<!-- Tailwind CSS CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+		<!-- global css -->
 		<link rel="stylesheet" href="./style.css" />
-
 		<!-- Google Fonts: Inter -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,15 +15,113 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body
+		class="bg-slate-50 text-slate-800 min-h-screen flex flex-col items-center justify-between"
+	>
+		<header
+			class="flex justify-between items-center border border-slate-200 p-4 w-full fixed backdrop-blur-md"
+		>
+			<div class="flex items-center text-2xl font-bold tracking-tight">
+				<span class="text-slate-900">Fatur</span>
+				<span class="text-blue-600">Aki</span>
+			</div>
 
-    <div class="flex items-center text-2xl font-bold tracking-tight">
-      <span class="text-slate-900">Fatur</span>
-      <span class="text-blue-600">Aki</span>
-    </div>
+			<div class="bg-blue-500 hover:bg-blue-600 text-white p-3 inline-block">
+				<a href="#onboarding">Acessar</a>
+			</div>
+		</header>
 
-		<h1>FaturAki Welcome</h1>
+		<main
+			class="flex jusfify-center items-center flex-col p-4 w-full gap-6 mt-20"
+		>
+			<section id="hero">
+				<h1 class="text-3xl font-bold">
+					Cria orçamentos profissionais em segundos, direto no telemóvel
+				</h1>
+				<p class="text-base">
+					Sem complicações, 100% otimizado para prestadores de serviços em
+					Moçambique. Calcula em Meticais (MZN) e envia por whatsapp
+					instantaniamente
+				</p>
 
-    <a href="./app.html">Configurar negócio</a>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+					temporibus maxime adipisci reiciendis, velit consequatur voluptates
+					autem! Corrupti, in quis, nisi, sint sed animi necessitatibus impedit
+					molestias error at consectetur.
+				</p>
+
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+					temporibus maxime adipisci reiciendis, velit consequatur voluptates
+					autem! Corrupti, in quis, nisi, sint sed animi necessitatibus impedit
+					molestias error at consectetur.
+				</p>
+
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+					temporibus maxime adipisci reiciendis, velit consequatur voluptates
+					autem! Corrupti, in quis, nisi, sint sed animi necessitatibus impedit
+					molestias error at consectetur.
+				</p>
+			</section>
+
+			<section id="onboarding">
+				<h2 class="text-2xl font-bold">Configura o teu negócio</h2>
+
+				<p class="text-base">
+					Estes vão aparecer automaticamente em todos os teus orçamentos
+				</p>
+
+				<form id="form" class="flex justify-center flex-col gap-4 py-6">
+					<div class="text-base flex flex-col gap-2">
+						<label for="name"
+							>Nome do Negócio<span class="text-red-800">*</span></label
+						>
+						<input
+							type="text"
+							id="name"
+							placeholder="ex: Carlos Serviços de Electricidade"
+							class="border"
+						/>
+					</div>
+
+					<div class="text-base flex flex-col gap-2">
+						<label for="name"
+							>Contacto / Whatsapp <span class="text-red-900">*</span></label
+						>
+						<input
+							type="text"
+							id="name"
+							placeholder="ex: +258 84 000 0000"
+							class="border"
+						/>
+					</div>
+
+					<div class="text-base flex flex-col gap-2">
+						<label for="name">NUIT</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="ex: 123456789"
+							class="border"
+						/>
+					</div>
+
+					<button
+						type="submit"
+						class="bg-blue-600 px-6 py-4 w-full text-white text-base font-bold hover:bg-blue-700 pointer"
+					>
+						Entrar no App
+					</button>
+				</form>
+			</section>
+		</main>
+
+		<!-- Rodapé -->
+		<footer class="w-full max-w-md text-center py-6 text-xs text-slate-400">
+			<p>&copy; 2026 FaturAki • Moçambique</p>
+			<p>Created by Zyron Labs</p>
+		</footer>
 	</body>
 </html>

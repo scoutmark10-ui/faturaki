@@ -1,42 +1,42 @@
 {
-    "$schema": "https://json.schemastore.org/web-manifest.json",
-    "name": "FaturAki - Orçamentos Rápidos",
-    "short_name": "FaturAki",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "#000000",
-    "theme_color": "#2563eb",
-    "orientation": "portrait",
-    "icons": [
-    {
-      "src": "assets/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-192x192-maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "assets/icons/icon-512x512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+	"$schema": "https://json.schemastore.org/web-manifest.json",
+	"name": "FaturAki - Orçamentos Rápidos",
+	"short_name": "FaturAki",
+	"start_url": "./index.html",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#2563eb",
+	"orientation": "portrait",
+	"icons": [
+		{
+			"src": "assets/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "assets/icons/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "assets/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "assets/icons/icon-192x192-maskable.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "assets/icons/icon-512x512-maskable.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
 }

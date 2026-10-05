@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="./js/head-loader.js"></script>
 		<title>FaturAki - Welcome</title>
+		<script src="./js/head-loader.js"></script>
+
 		<!-- Tailwind CSS CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<!-- global css -->
@@ -16,82 +17,248 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- Splash sections -->
+		<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 	</head>
 	<body
 		class="bg-slate-50 text-slate-800 min-h-screen flex flex-col items-center justify-between"
 	>
 		<header
-			class="flex justify-between items-center border border-slate-200 p-4 w-full fixed backdrop-blur-md"
+			class="flex justify-between items-center border border-slate-200 p-4 w-full fixed backdrop-blur-md z-50 bg-white/70"
 		>
 			<div class="flex items-center text-2xl font-bold tracking-tight">
-				<span class="text-slate-900">Fatur</span>
-				<span class="text-blue-600">Aki</span>
+				<a href="#hero" class="flex">
+					<span class="text-slate-900">Fatur</span>
+					<span class="text-blue-600">Aki</span>
+				</a>
 			</div>
 
-			<div class="bg-blue-400 hover:bg-blue-500 text-white p-2 inline-block font-bold text-base rounded-xl">
-				Moçambique 🇲🇿
+			<div
+				class="bg-blue-400 hover:bg-blue-500 text-white p-2 inline-block font-bold text-base transition-all duration-300 ease-in-out cursor-pointer"
+			>
+				Moçambique &#x1F1F2;&#x1F1FF;
 			</div>
 		</header>
 
 		<main
-			class="flex jusfify-center items-center flex-col p-4 w-full gap-6 mt-20"
+			class="flex justify-center items-center flex-col p-4 w-full max-w-4xl gap-12 mt-24"
 		>
-			<section id="hero">
-				<h1 class="text-3xl font-bold">
-					Cria orçamentos profissionais em segundos, direto no telemóvel
+			<!-- HERO SECTION -->
+			<section
+				id="hero"
+				class="flex items-center flex-col text-center gap-6 min-h-[80vh] px-4 justify-center"
+			>
+				<h1 class="text-4xl font-bold leading-tight text-slate-900">
+					Cria orçamentos profissionais em segundos, direto no telemóvel.
 				</h1>
-				<p class="text-base">
-					Sem complicações, 100% otimizado para prestadores de serviços em
-					Moçambique. Calcula em Meticais (MZN) e envia por whatsapp
-					instantaniamente
+
+				<p class="mt-2 text-lg leading-relaxed text-slate-600">
+					Desenvolvido a pensar nos prestadores de serviços em Moçambique. Faz
+					cálculos automáticos em Meticais (MZN) e envia orçamentos limpos
+					directamente para o WhatsApp.
+				</p>
+
+				<div
+					class="flex justify-center items-center gap-4 flex-col min-w-full mt-4"
+				>
+					<a
+						href="#onboarding"
+						class="bg-blue-600 px-8 py-4 w-full text-center text-white text-base font-bold hover:bg-blue-800 transition-all duration-300 ease-in-out cursor-pointer"
+						>Começar Agora</a
+					>
+					<a
+						href="#benefits"
+						class="border border-blue-600 px-8 py-4 w-full text-center text-blue-600 text-base font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out cursor-pointer"
+						>Saiba Mais</a
+					>
+				</div>
+			</section>
+
+			<!-- CONTEXT SECTION -->
+			<section
+				id="context"
+				class="flex items-center flex-col text-center gap-4 px-4"
+			>
+				<h2 class="text-3xl font-bold text-slate-900">
+					Feito para a realidade do nosso mercado
+				</h2>
+				<p class="text-base text-slate-600">
+					Chega de perder tempo com folhas de papel ou cálculos manuais na
+					calculadora do telefone. O FaturAki dá-te agilidade no terreno, seja
+					numa obra, em biscatos ou entregas.
 				</p>
 			</section>
 
-			<section id="onboarding">
-				<h2 class="text-2xl font-bold">Configura o teu negócio</h2>
+			<!-- BENEFITS SECTION -->
+			<section
+				id="benefits"
+				class="flex flex-col justify-center px-8 gap-6 min-w-screen mt-10"
+			>
+				<h2 class="text-3xl font-bold text-center">Benefícios</h2>
 
-				<p class="text-base">
-					Estes vão aparecer automaticamente em todos os teus orçamentos
-				</p>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+					<!-- Benefício 1: Offline -->
+					<div
+						class="flex flex-col gap-3 border border-slate-200 shadow rounded-xl p-5 bg-white hover:shadow-md transition-all duration-300 ease-in-out"
+					>
+						<!-- Ícone de Escudo/Segurança -->
+						<div
+							class="text-blue-600 bg-blue-50 p-2 rounded-lg w-10 h-10 flex items-center justify-center"
+						>
+							<svg
+								xmlns="http://w3.org"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-slate-900">
+								100% Offline & Seguro
+							</h3>
+							<p class="text-base text-slate-600 mt-1">
+								Os teus dados ficam guardados no teu próprio telemóvel. Funciona
+								mesmo sem internet.
+							</p>
+						</div>
+					</div>
 
-				<form id="form" class="flex justify-center flex-col gap-4 py-6">
+					<!-- Benefício 2: Meticais -->
+					<div
+						class="flex flex-col gap-3 border border-slate-200 shadow rounded-xl p-5 bg-white hover:shadow-md transition-all duration-300 ease-in-out"
+					>
+						<!-- Ícone de Calculadora/Dinheiro -->
+						<div
+							class="text-blue-600 bg-blue-50 p-2 rounded-lg w-10 h-10 flex items-center justify-center"
+						>
+							<svg
+								xmlns="http://w3.org"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M15.75 15.75V18m-3-2.25h.008v.008H12.75V15.75zm0 2.25h.008v.008H12.75V18zm0-4.5h.008v.008H12.75V13.5zm-2.25-.75h.008v.008H10.5V12.75zm0 2.25h.008v.008H10.5V15zm0 2.25h.008v.008H10.5V17.25zM14.25 12.75h.008v.008h-.008V12.75zm0 2.25h.008v.008h-.008V15zm3-2.25h.008v.008h-.008V12.75zm0 2.25h.008v.008h-.008V15zM14.25 9.75h1.5a.75.75 0 00.75-.75V7.5a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v1.5a.75.75 0 00.75.75zm-3.75 0h1.5a.75.75 0 00.75-.75V7.5a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v1.5a.75.75 0 00.75 9.75zM6.75 21h10.5A2.25 2.25 0 0019.5 18.75V5.25A2.25 2.25 0 0017.25 3H6.75A2.25 2.25 0 004.5 5.25v13.5A2.25 2.25 0 006.75 21z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-slate-900">
+								Cálculos em Meticais (MZN)
+							</h3>
+							<p class="text-base text-slate-600 mt-1">
+								Adicione itens, quantidades e preços unitários. O subtotal e o
+								geral calculam-se sozinhos na hora.
+							</p>
+						</div>
+					</div>
+
+					<!-- Benefício 3: Whatsapp -->
+					<div
+						class="flex flex-col gap-3 border border-slate-200 shadow rounded-xl p-5 bg-white hover:shadow-md transition-all duration-300 ease-in-out"
+					>
+						<!-- Ícone de Balão de Conversa/Partilha -->
+						<div
+							class="text-blue-600 bg-blue-50 p-2 rounded-lg w-10 h-10 flex items-center justify-center"
+						>
+							<svg
+								xmlns="http://w3.org"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a.596 0 01-.655-.075.598 0 01-.154-.615l1.01-3.411C4.42 15.542 3 13.9 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-slate-900">
+								Partilha via Whatsapp
+							</h3>
+							<p class="text-base text-slate-600 mt-1">
+								Gera o orçamento com um aspeto limpo e profissional e envia
+								diretamente para o chat do cliente num só clique.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ONBOARDING SECTION -->
+			<section
+				id="onboarding"
+				class="flex items-center flex-col gap-4 w-full max-w-md p-6 bg-white border border-slate-200 rounded-xl shadow-sm mt-5"
+			>
+				<div class="text-center">
+					<h2 class="text-3xl font-bold text-slate-900">
+						Configura o teu negócio
+					</h2>
+					<p class="text-base text-slate-500 mt-1">
+						Estes dados vão aparecer automaticamente em todos os teus
+						orçamentos.
+					</p>
+				</div>
+
+				<form id="form" class="flex flex-col gap-4 w-full py-4">
 					<div class="text-base flex flex-col gap-2">
-						<label for="name"
-							>Nome do Negócio<span class="text-red-800">*</span></label
+						<label for="biz-name" class="font-medium text-slate-700"
+							>Nome do Negócio<span class="text-red-600">*</span></label
 						>
 						<input
 							type="text"
-							id="name"
+							id="biz-name"
 							placeholder="ex: Carlos Serviços de Electricidade"
-							class="border"
+							class="border border-slate-300 px-4 py-3 w-full focus:outline-blue-600"
+							required
 						/>
 					</div>
 
 					<div class="text-base flex flex-col gap-2">
-						<label for="name"
-							>Contacto / Whatsapp <span class="text-red-900">*</span></label
+						<label for="biz-phone" class="font-medium text-slate-700"
+							>Contacto / WhatsApp <span class="text-red-600">*</span></label
+						>
+						<input
+							type="tel"
+							id="biz-phone"
+							placeholder="ex: +258 84 000 0000"
+							class="border border-slate-300 px-4 py-3 w-full focus:outline-blue-600"
+							required
+						/>
+					</div>
+
+					<div class="text-base flex flex-col gap-2">
+						<label for="biz-nuit" class="font-medium text-slate-700"
+							>NUIT</label
 						>
 						<input
 							type="text"
-							id="name"
-							placeholder="ex: +258 84 000 0000"
-							class="border"
-						/>
-					</div>
-
-					<div class="text-base flex flex-col gap-2">
-						<label for="name">NUIT</label>
-						<input
-							type="text"
-							id="name"
+							id="biz-nuit"
 							placeholder="ex: 123456789"
-							class="border"
+							class="border border-slate-300 px-4 py-3 w-full focus:outline-blue-600"
 						/>
 					</div>
 
 					<button
 						type="submit"
-						class="bg-blue-600 px-6 py-4 w-full text-white text-base font-bold hover:bg-blue-800 pointer"
+						class="bg-blue-600 px-8 py-4 w-full text-white text-base font-bold hover:bg-blue-800 transition-all duration-300 ease-in-out cursor-pointer mt-2"
 					>
 						Entrar no App
 					</button>
@@ -100,9 +267,79 @@
 		</main>
 
 		<!-- Rodapé -->
-		<footer class="w-full max-w-md text-center py-6 text-xs text-slate-400">
-			<p>&copy; 2026 FaturAki • Moçambique</p>
-			<p>Created by Zyron Labs</p>
+		<footer
+			class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full text-center py-10 px-5 text-xs bg-blue-200 text-slate-400 rounded-t-3xl mt-10"
+		>
+			<div class="text-xl flex-col font-bold tracking-tight gap-2">
+				<div>
+					<a href="index.html" class="flex">
+						<span class="text-slate-900">Fatur</span>
+						<span class="text-blue-600">Aki</span>
+					</a>
+				</div>
+				<div class="text-sm font-normal text-slate-700 text-start">
+					Ferramenta rápida de orçamentos para empreendedores e prestadores de
+					serviços.
+				</div>
+			</div>
+
+			<div class="text-xl flex-col font-bold tracking-tight gap-2">
+				<div>
+					<div class="flex gap-1">
+						<span class="text-blue-600">PWA</span>
+						<span class="text-slate-900">Ready</span>
+					</div>
+				</div>
+				<div class="text-sm font-normal text-slate-700 text-start">
+					Instalável no ecra inicial do Android e iOS. Sem necessidade de app
+					stores.
+				</div>
+			</div>
+
+			<div class="text-sm flex-col tracking-tight text-slate-500">
+				<p>&copy; 2026 FaturAki. Todos os direitos reservados.</p>
+				<p class="flex justify-center gap-1">
+					Created by <span class="text-indigo-600 font-bold">Zyron</span
+					><span class="font-bold text-slate-900">Labs</span>
+				</p>
+			</div>
 		</footer>
+
+		<script>
+			// Inicialização otimizada
+			const lenis = new Lenis({
+				duration: 1.6,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				orientation: "vertical",
+				gestureOrientation: "vertical",
+				smoothWheel: true,
+				wheelMultiplier: 1.1,
+				touchMultiplier: 1.5,
+				infinite: false,
+			});
+
+			function raf(time) {
+				lenis.raf(time);
+				requestAnimationFrame(raf);
+			}
+
+			requestAnimationFrame(raf);
+
+			// Truque extra de Vibe: Fazer o scroll pelos links <a href="#id"> ser controlado pelo Lenis
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute("href"));
+					if (target) {
+						// O Lenis faz o scroll perfeito até ao elemento com compensação do Header fixo
+						lenis.scrollTo(target, {
+							offset: -100,
+							immediate: false,
+							duration: 1.8,
+						});
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
